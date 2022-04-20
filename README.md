@@ -1,14 +1,15 @@
 Term Project
 CEN 4010
 
-
+# Objective
 Analyze and design a software system to control an Automatic Teller Machine (ATM) for DSC Bank of Daytona Beach, Florida. DSC bank provides checking accounts, saving accounts, loan services and credit card services to its’ customers.
 
+# Goal
 Customers can gain information and make transactions using this ATM by inserting their banking card and supplying their Personal Identification Number (PIN).
 
-Assume the following:
+# Assume the following:
 
-•	Multiple accounts under one customer name are possible. This includes the customer who has one of each different type of account as well as the customer with several of one type of account.
+*	Multiple accounts under one customer name are possible. This includes the customer who has one of each different type of account as well as the customer with several of one type of account.
 •	Each account has a unique account number but there is only one PIN per customer. All of any one individual’s accounts will be accessed using this one PIN.
 •	The ATM is a menu driven system which displays menus and information on a CRT and accepts input through an ASCII keyboard.
 
