@@ -1,0 +1,232 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopez Banking</title>
+
+    <!-- This link is dedicated to connecting the index.css file to this html file. -->
+    <link rel="stylesheet" href="index.css">
+    <!-- This script is dedicated to connecting the index.js file to this html file. -->
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <!-- A quick thanks. -->
+    <div>
+        Thank you for choosing Lopez Banking!
+    </div>
+    <br><br>
+
+    <!-- Start up the ATM program on click. -->
+    <button id="setupBtn" onclick="gettingStarted();">Click this button to get started on your banking
+        adventure. </button>
+
+    <!-- Retrieve user name. -->
+    <div id="getUsername">
+        <br>
+        <div>
+            Let's get you started!
+        </div>
+        <br>
+        <div>
+            Please enter your name below.
+        </div>
+        <br>
+        <input id="username" type="text" placeholder="Ex. David">
+        <button onclick="getUserName();" type="button">Submit</button>
+        <br>
+    </div>
+
+    <!-- Show user the system has recieved their name. -->
+    <p id="showUsername"></p>
+
+    <!-- Setup the user's four-digit pin number. -->
+    <div id="getPin">
+        <div>
+            Now, we must set up your account security.
+        </div>
+        <br>
+        <div>
+            Please enter a four-digit pin code below.
+        </div>
+        <br>
+        <input id="pin" type="number" placeholder="Ex. 1234">
+        <button onclick="getUserPin();" type="button">Submit</button>
+        <br>
+    </div>
+
+    <!-- Show user their pin was securely saved. -->
+    <p id="showPin"></p>
+
+    <!-- Initiate user log-in. -->
+    <div id="loginUser">
+        <div>
+            Please re-enter your name below.
+        </div>
+        <br>
+        <input id="checkUsername" type="text" placeholder="Ex. David">
+        <button onclick="logIn();" type="button">Log In</button>
+        <br>
+    </div>
+
+    <!-- Show user they have entered a valid username. -->
+    <p id="confirm"></p>
+
+    <!-- Confirm user has the correct pin for their user. -->
+    <div id="authenticate">
+        <div>
+            Please enter the pin associated with your account.
+        </div>
+        <br>
+        <input id="checkPin" type="number" placeholder="Ex. 1234">
+        <button onclick="authenticatePinForLogIn1();" type="button">Submit Pin</button>
+    </div>
+
+    <!-- Show user they have successfully logged in.  -->
+    <p id="confirmPin"></p>
+
+    <!-- Ask user to choose which type of account they would like to open. -->
+    <div id="getAccType">
+        <div>
+            Choose which type of account you would like to open below.
+        </div>
+        <br>
+
+        <!-- Account types for user to choose from. -->
+        <button id="accType1" onclick="checking1();" type="button">Checking</button>
+        <input id="accType2" type="button" value="Savings" onclick="savings1();">
+        <input id="accType3" type="button" value="Credit" onclick="credit1();">
+        <input id="accType4" type="button" value="Loan" onclick="loan1();">
+        <input id="accType5" type="button" value="Mortgage" onclick="mortgage1();">
+        <input id="accType6" type="button" value="Car/Boat Loan" onclick="carBoatLoan1();">
+        <br>
+    </div>
+
+    <!-- Show user what option they chose, request pin number -->
+    <p id="output1"></p>
+
+    <div id="authenticate2">
+        <div>
+            Please enter the pin associated with your account.
+        </div>
+        <br>
+        <input id="checkPin2" type="number" placeholder="Ex. 1234">
+        <button onclick="authenticatePinForLogIn2();" type="button">Submit Pin</button>
+    </div>
+
+    <div id="authenticate3">
+        <div>
+            Please enter the pin associated with your account.
+        </div>
+        <br>
+        <input id="checkPin3" type="number" placeholder="Ex. 1234">
+        <button onclick="authenticatePinForLogIn3();" type="button">Submit Pin</button>
+    </div>
+
+    <div id="authenticate4">
+        <div>
+            Please enter the pin associated with your account.
+        </div>
+        <br>
+        <input id="checkPin3" type="number" placeholder="Ex. 1234">
+        <button onclick="authenticatePinForLogIn3();" type="button">Submit Pin</button>
+    </div>
+
+    <!-- Show user they entered the correct pin, Allow user to begin manipulating checking account. -->
+    <p id="confirmPin2"></p>
+
+    <!-- Show user their checking account and what it's named. -->
+    <p id="output2"></p>
+
+    <!-- Show user their savings account and what it's named. -->
+    <p id="output3"></p>
+
+    <!-- Show user their credit account and what it's named. -->
+    <p id="output4"></p>
+
+    <!-- Contains all sequences associated with the Checking account type -->
+    <div id="CHECKING">
+        <!-- Prompt user to name their checking account for future reference. -->
+        <div id="nameChecking">
+            <div>
+                Please provide a name for your checking account below.
+            </div>
+            <br>
+            <input id="checkingAccName" type="text" placeholder="Ex. David's Checking">
+            <button onclick="checking2();" type="button">Confirm Name</button>
+        </div>
+
+        <div id="checkingOrder1">
+            <div>
+                What would you like to do with your checking account?
+            </div>
+            <br>
+            <button onclick="checking3();" type="button">Check Balance</button>
+            <button onclick="checking4();" type="button">Withdraw</button>
+            <button onclick="checking5();" type="button">Deposit</button>
+            <button onclick="exit1();" type="button">Exit</button>
+        </div>
+
+    </div>
+
+    <div id="SAVINGS">
+        <!-- Prompt user to name their checking account for future reference. -->
+        <div id="nameSavings">
+            <div>
+                Please provide a name for your savings account below.
+            </div>
+            <br>
+            <input id="savingsAccName" type="text" placeholder="Ex. David's Savings">
+            <button onclick="savings2();" type="button">Confirm Name</button>
+        </div>
+
+        <div id="savingsOrder1">
+            <div>
+                What would you like to do with your savings account?
+            </div>
+            <br>
+            <button onclick="savings3();" type="button">Check Balance</button>
+            <button onclick="savings4();" type="button">Deposit</button>
+            <button onclick="exit1();" type="button">Exit</button>
+        </div>
+    </div>
+
+    <div id="CREDIT">
+        <!-- Prompt user to name their checking account for future reference. -->
+        <div id="nameCredit">
+            <div>
+                Please provide a name for your credit account below.
+            </div>
+            <br>
+            <input id="creditAccName" type="text" placeholder="Ex. David's Credit">
+            <button onclick="credit2();" type="button">Confirm Name</button>
+        </div>
+
+        <div id="creditOrder1">
+            <div>
+                This is a test application. For testing purposes, select one of the four credit options below.
+            </div>
+            <br>
+            <button onclick="credit3();" type="button">450 credit score</button>
+            <button onclick="credit4();" type="button">600 credit score</button>
+            <button onclick="credit5();" type="button">750 credit score</button>
+            <button onclick="credit6();" type="button">900 credit score</button>
+            <br>
+        </div>
+
+        <div id="creditOrder2">
+            <div>
+                What would you like to do with your credit account?
+            </div>
+            <br>
+            <button onclick="credit7();" type="button">Check Balance</button>
+            <button onclick="credit8();" type="button">Withdraw</button>
+            <button onclick="credit9();" type="button">Pay</button>
+            <button onclick="exit1();" type="button">Exit</button>
+        </div>
+    </div>
+</body>
+
+</html>
