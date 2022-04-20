@@ -13,8 +13,7 @@ Customers can gain information and make transactions using this ATM by inserting
 *	Each account has a unique account number but there is only one PIN per customer. All of any one individual’s accounts will be accessed using this one PIN.
 *	The ATM is a menu driven system which displays menus and information on a CRT and accepts input through an ASCII keyboard.
 
-
-## The following minimum functionality should be included in your system. Any additional features that will enhance the systems capabilities and/or efficiency should also be included
+The following minimum functionality should be included in your system. Any additional features that will enhance the systems capabilities and/or efficiency should also be included
 
 *	A customer should be able to gain balance information on each type of account he/she has with DSCB bank (checking, savings, loan, mortgage, car or boat loan account and credit card account).
 *	Customers should be allowed to deposit funds to any account and make cash withdrawals from either a checking or savings account. 
