@@ -1,52 +1,14 @@
-const usersJSON = `[
-  {
-    "firstName":"David", 
-    "lastName":"Lopez", 
-    "username":"dlopez", 
-    "pin":"1234",
-    "isSignIn": "false"
-  }, 
-  {
-    "firstName":"Lucas", 
-    "lastName":"Lopez", 
-    "username":"lmlopez", 
-    "pin":"1234",
-    "isSignIn": "false"
-  },
-  {
-    "firstName":"Matthew", 
-    "lastName":"Lopez", 
-    "username":"dmlopez", 
-    "pin":"1234",
-    "isSignIn": "false"
-  }
-]`;
-const users = JSON.parse(usersJSON);
-
-const accountsJSON = `[
-    {
-      "isActive":"true", 
-      "belongsTo":0, 
-      "type":"Checking",
-      "balance":1000
-    },
-    {
-      "isActive":"true", 
-      "belongsTo":1, 
-      "type":"Savings",
-      "balance":2300
-    },
-    {
-      "isActive":"true", 
-      "belongsTo":2, 
-      "type":"Loan",
-      "balance":300
-    }
-  ]`;
-const accounts = JSON.parse(accountsJSON);
-
-console.table(users);
-console.table(accounts);
+/* 
+Fetch the users data located on a JSON file within the same folder as this javascript file.  Normally, JSON files are used for configurrations rather than data but we are going to use to use for data since we don't have much data to work with.  This fetch file will only work if your application is running on a local develoment server like "Live Server". 
+https://www.w3schools.com/js/js_api_fetch.asp
+*/
+fetch('./users.json')
+.then(function(resp) {
+  return resp.json();
+})
+.then(function(data) {
+  console.log(data.users);
+});
 
 // Create a function for register
 function login() {
@@ -121,6 +83,13 @@ function loginUser() {
 
 }
 
+
+
+
+
+
+
+
 // Create function to add users to JSON.
 function registerUser() {
 
@@ -131,8 +100,36 @@ function registerUser() {
   let pin = document.getElementById('getPin').value;
   
   console.log(firstName + lastName + username + pin);
+
+  // Create a new object
+  // class newUser [{
+  //   "firstName" : firstName,
+  //   "lastName" : lastName,
+  //   "username": username,
+  //   "pin": pin
+  //   }
+  // ];
+
+
+  // Reset the field to blank
+  document.getElementById("getFirstName").value = "";
+  document.getElementById("getLastName").value = "";
+  document.getElementById("getUsername").value = "";
+  document.getElementById("getPin").value = "";
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function transfer() {
   // Retrieve all accounts for logged in user.
