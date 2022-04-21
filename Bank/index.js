@@ -3,19 +3,22 @@ const usersJSON = `[
     "firstName":"David", 
     "lastName":"Lopez", 
     "username":"dlopez", 
-    "pin":"1234"
+    "pin":"1234",
+    "isSignIn": "false"
   }, 
   {
     "firstName":"Lucas", 
     "lastName":"Lopez", 
     "username":"lmlopez", 
-    "pin":"1234"
+    "pin":"1234",
+    "isSignIn": "false"
   },
   {
     "firstName":"Matthew", 
     "lastName":"Lopez", 
     "username":"dmlopez", 
-    "pin":"1234"
+    "pin":"1234",
+    "isSignIn": "false"
   }
 ]`;
 const users = JSON.parse(usersJSON);
@@ -75,7 +78,7 @@ function displayRegisterForm() {
 }
 
 // Display Login Form
-function displayLoginForm() {
+function displayLoginForm() { 
 
   // Save form IDs to a variable.
   let registerForm = document.getElementById('registerForm');
@@ -100,28 +103,21 @@ function submit() {
   
 }
 
-// Submit Button for JSON
-function displayUsers() {
+// Create function to add users to JSON.
+function loginUser() {
 
-
-  let user = "";
-  for (let i = 0; i < users.length; i++) {
-    user += users[i].firstName + " " + users[i].lastName + " " + users[i].username + " " + users[i].pin + "<br>";
-  }
-
-  document.getElementById("users").innerHTML = user;
-
-}
-
-function displayAccounts() {
-
-
-  let accounts = "";
-  for (let i = 0; i < accounts.length; i++) {
-    account += accounts[i].isActive + " " + accounts[i].belongsTo + " " + accounts[i].type + " " + accounts[i].type + "<br>";
-  }
-
-  document.getElementById("users").innerHTML = account;
+  // Capture the values from the form fields.
+  let username = document.getElementById('username').value;
+  
+  console.log(username)
+   
+  // If user does not exist, ask them to register.
+  // if(username != users.username) {
+  //   // Change Dyamic Message to welcome
+  //   document.getElementById('dynamicMessage').innerHTML = "Check Spelling or register your account!";
+  //   displayRegisterForm();
+  // }
+  // else check user pin.
 
 }
 
@@ -129,19 +125,66 @@ function displayAccounts() {
 function registerUser() {
 
   // Capture the values from the form fields.
-  let firstName = document.getElementById('firstName').value;
-  let lastName = document.getElementById('lastName').value;
-  let username = document.getElementById('username').value;
-  let pin = document.getElementById('pin').value;
-  console.log(firstName + lastName + username + pin);
-
-  users.push({
-    "firstName": firstName, 
-    "lastName": lastName, 
-    "username": username, 
-    "pin": pin
-    });
-
-  displayUsers();
+  let firstName = document.getElementById('getFirstName').value;
+  let lastName = document.getElementById('getLastName').value;
+  let username = document.getElementById('getUsername').value;
+  let pin = document.getElementById('getPin').value;
   
+  console.log(firstName + lastName + username + pin);
+  
+}
+
+function transfer() {
+  // Retrieve all accounts for logged in user.
+
+  // Select the "FROM" account.
+
+  // Select the "TO" account.
+
+  // Save Transfer Amount from DOM.
+  let transferAmount = document.getElementById('transferAmount').value
+
+  // Retreive the balance of the "FROM" account and subtract the amount you want to transfer.
+
+  // Retreive the balance of the "TO" account and add the amount you want to transfer.
+}
+
+
+
+
+function depositAmount() {
+  // Retrieve Balance
+  // Loop through the table
+  let currentBalance = accounts[0].balance;
+
+  let deposit = parseInt(document.getElementById("depositAmt").value);
+
+  // 1000.00 + 100.00
+  let newBalance = currentBalance + deposit;
+  console.log(newBalance)
+
+  // Change Balance
+  accounts[0].balance = newBalance;
+  console.table(accounts);
+
+  document.getElementById('balanceAmt').innerHTML = newBalance;
+  document.getElementById("depositAmt").value = "";
+}
+
+function withdrawAmount() {
+  // Retrieve Balance
+  let currentBalance = accounts[0].balance;
+
+  let withdraw = parseInt(document.getElementById("withdrawAmt").value);
+
+  // 1000.00 + 100.00
+  let newBalance = currentBalance - withdraw;
+  console.log(newBalance)
+
+  // Change Balance
+  accounts[0].balance = newBalance;
+  console.table(accounts);
+
+  document.getElementById('balanceAmt').innerHTML = newBalance;
+  document.getElementById("withdrawAmt").value = "";
 }

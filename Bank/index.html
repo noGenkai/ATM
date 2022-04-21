@@ -16,18 +16,12 @@
     <h1>Welcome to Lopez Bank</h1>
 
     <!-- Login and Register account div -->
-    <div>
+    <div> 
         <!-- A log in Button for users that already have a Login. -->
         <button id="login" onclick="login()">Login</button>
 
         <!-- A register button for users that do not have a  -->
         <button id="register" onclick="register()">Register</button>
-
-        <!-- A register button for users that do not have a  -->
-        <button id="displayUsers" onclick="displayUsers()">Display Users</button>
-
-        <!-- A register button for users that do not have a  -->
-        <button id="displayAccount" onclick="displayAccounts()">Display Accounts</button>
 
     </div>
 
@@ -40,46 +34,69 @@
 
     <!-- Register Form -->
     <div id="registerForm">
-        <form action="">
+        <h3>Register</h3>
 
-            <!-- First Name -->
-            <label for="firstName">First Name: </label>
-            <input type="text" id="firstName">
+            <!-- First Name Field -->
+            <label for="getFirstName">First Name</label>
+            <input type="text" id="getFirstName" name="getFirstName">
 
-            <!-- Last Name -->
-            <label for="lastName">Last Name: </label>
-            <input type="text" id="username">
+            <!-- Last Name Field -->
+            <label for="getLastName">Last Name</label>
+            <input type="text" id="getLastName" name="getLastName">
 
             <!-- Username Field -->
-            <label for="username">Username</label>
-            <input type="text" id="username" >
+            <label for="getUsername">Username</label>
+            <input type="text" id="getUsername" name="getUsername">
 
-            <!-- Password Field -->
-            <label for="pin">Pin</label>
-            <input type="text" id="password">
+            <!-- PIN Field -->
+            <label for="getPin">Pin</label>
+            <input type="text" id="getPin" name="getPin">
+    
+            <button onclick="registerUser()" type="button">
+                Register
+            </button>
 
-            <button onclick="registerUser()" type="button">Register</button>
-        </form>
+            <br>
     </div>
 
     <!-- Login Form -->
     <div id="loginForm">
-        <form action="">
-
+        <h3>Login:</h3>
             <!-- Username Field -->
-            <label for="pin" class="registerInput loginInput">Username</label>
-            <input type="text" id="username" >
+            <label for="getUsername">Username</label>
+            <input type="text" id="getUsername" name="getUsername">
 
-            <!-- Password Field -->
-            <label for="pin" class="registerInput loginInput">Pin</label>
-            <input type="text" id="pin">
-
-            <button onclick="loginUser()" type="button">Log In</button>
-        </form>
+            <!-- Last Name Field -->
+            <label for="getPin">Pin</label>
+            <input type="text" id="getPin" name="getPin">
+    
+            <button onclick="registerUser()" type="button">
+                Register
+            </button>
     </div>
 
-    <div id="users"></div>
-    <div id="accounts"></div>
+    <!-- Account Transaction Form -->
+    <div id="transactionForm">
+        <h3>Balance: <span id="balanceAmt"></span></h3>
+            <!-- Deposit Field -->
+            <label for="depositfAmt">Deposit</label>
+            <input type="number" id="depositAmt" name="depositAmt">
+    
+            <button onclick="depositAmount()" type="button">
+                Deposit Funds
+            </button>
+
+            <br>
+
+            <!-- Withdraw Field -->
+            <label for="withdrawAmt">Withdraw</label>
+            <input type="number" id="withdrawAmt" name="withdrawAmt">
+    
+            <button onclick="withdrawAmount()" type="button">
+                Withdraw Funds
+            </button>
+    </div>
+
 </body>
 
 </html>
