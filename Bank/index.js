@@ -113,6 +113,18 @@ function displayUsers() {
 
 }
 
+function displayAccounts() {
+
+
+  let accounts = "";
+  for (let i = 0; i < accounts.length; i++) {
+    account += accounts[i].isActive + " " + accounts[i].belongsTo + " " + accounts[i].type + " " + accounts[i].type + "<br>";
+  }
+
+  document.getElementById("users").innerHTML = account;
+
+}
+
 // Create function to add users to JSON.
 function registerUser() {
 
@@ -122,7 +134,7 @@ function registerUser() {
   let username = document.getElementById('username').value;
   let pin = document.getElementById('pin').value;
   console.log(firstName + lastName + username + pin);
-  
+
   users.push({
     "firstName": firstName, 
     "lastName": lastName, 
