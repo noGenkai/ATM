@@ -10,6 +10,14 @@ fetch('./users.json')
   console.log(data.users);
 });
 
+fetch('./accounts.json')
+.then(function(resp) {
+  return resp.json();
+})
+.then(function(data) {
+  console.log(data.accounts);
+});
+
 // Create a function for register
 function login() {
 
