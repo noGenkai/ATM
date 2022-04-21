@@ -23,6 +23,9 @@
         <!-- A register button for users that do not have a  -->
         <button id="register" onclick="register()">Register</button>
 
+        <!-- A register button for users that do not have a  -->
+        <button id="displayUsers" onclick="displayUsers()">Display Users</button>
+
     </div>
 
     <br>
@@ -41,18 +44,18 @@
             <input type="text" id="firstName">
 
             <!-- Last Name -->
-            <label for="lastName" >Last Name: </label>
+            <label for="lastName">Last Name: </label>
             <input type="text" id="username">
 
             <!-- Username Field -->
-            <label for="username" class="registerInput loginInput">Username</label>
+            <label for="username">Username</label>
             <input type="text" id="username" >
 
             <!-- Password Field -->
-            <label for="password" class="registerInput loginInput">Password</label>
-            <input type="password" id="password">
+            <label for="pin">Pin</label>
+            <input type="text" id="password">
 
-            <button onclick="getUserCredentials();" type="button" class="registerInput loginInput">Submit</button>
+            <button onclick="registerUser()" type="button">Register</button>
         </form>
     </div>
 
@@ -61,19 +64,19 @@
         <form action="">
 
             <!-- Username Field -->
-            <label for="username" class="registerInput loginInput">Username</label>
+            <label for="pin" class="registerInput loginInput">Username</label>
             <input type="text" id="username" >
 
             <!-- Password Field -->
-            <label for="password" class="registerInput loginInput">Password</label>
-            <input type="password" id="password">
+            <label for="pin" class="registerInput loginInput">Pin</label>
+            <input type="text" id="pin">
 
-            <button onclick="getUserCredentials();" type="button" class="registerInput loginInput">Submit</button>
+            <button onclick="loginUser()" type="button">Log In</button>
         </form>
     </div>
 
     <div id="users"></div>
-    
+    <div id="accounts"></div>
 </body>
 
 </html>

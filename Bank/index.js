@@ -1,6 +1,49 @@
-const users = [
-  {"id":"1", "firstName":"David", "lastName":"Lopez", "username":"dlopez", "password":"Welcome1"},
-];
+const usersJSON = `[
+  {
+    "firstName":"David", 
+    "lastName":"Lopez", 
+    "username":"dlopez", 
+    "pin":"1234"
+  }, 
+  {
+    "firstName":"Lucas", 
+    "lastName":"Lopez", 
+    "username":"lmlopez", 
+    "pin":"1234"
+  },
+  {
+    "firstName":"Matthew", 
+    "lastName":"Lopez", 
+    "username":"dmlopez", 
+    "pin":"1234"
+  }
+]`;
+const users = JSON.parse(usersJSON);
+
+const accountsJSON = `[
+    {
+      "isActive":"true", 
+      "belongsTo":0, 
+      "type":"Checking",
+      "balance":1000
+    },
+    {
+      "isActive":"true", 
+      "belongsTo":1, 
+      "type":"Savings",
+      "balance":2300
+    },
+    {
+      "isActive":"true", 
+      "belongsTo":2, 
+      "type":"Loan",
+      "balance":300
+    }
+  ]`;
+const accounts = JSON.parse(accountsJSON);
+
+console.table(users);
+console.table(accounts);
 
 // Create a function for register
 function login() {
@@ -10,6 +53,7 @@ function login() {
   displayLoginForm();
 
 }
+
 // Create a function for Login
 function register() {
   
@@ -46,22 +90,46 @@ function displayLoginForm() {
 function submit() {
 
   // Save Value of input fields from form.
-  let firstName = document.getElementById('firstName').value;
-  let lastName = document.getElementById('firstName').value;
-  let username = document.getElementById('firstName').value;
-  let password = document.getElementById('firstName').value;
+  // let id =+ 1;
+  
+
   // Check Credentials against JSON Arrays.
   // loop through json object to see if the user exists.
+
+  // Display the Users json.
   
-  // Add Value to JSON. (users)
-  users.id += 1;
-  users.firstName = firstName;
-  users.lastName = lastName;
-  users.username = username;
-  users.password = password;
+}
 
-  // Display data on the dom
-  myArray = JSON.parse(users);
+// Submit Button for JSON
+function displayUsers() {
 
-  document.getElementById(users).innerHTML = myArray;
+
+  let user = "";
+  for (let i = 0; i < users.length; i++) {
+    user += users[i].firstName + " " + users[i].lastName + " " + users[i].username + " " + users[i].pin + "<br>";
+  }
+
+  document.getElementById("users").innerHTML = user;
+
+}
+
+// Create function to add users to JSON.
+function registerUser() {
+
+  // Capture the values from the form fields.
+  let firstName = document.getElementById('firstName').value;
+  let lastName = document.getElementById('lastName').value;
+  let username = document.getElementById('username').value;
+  let pin = document.getElementById('pin').value;
+  console.log(firstName + lastName + username + pin);
+  
+  users.push({
+    "firstName": firstName, 
+    "lastName": lastName, 
+    "username": username, 
+    "pin": pin
+    });
+
+  displayUsers();
+  
 }

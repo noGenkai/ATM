@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+            "firstName":"David", 
+            "lastName":"Lopez", 
+            "username":"dlopez", 
+            "pin":"Welcome1"
+        }, 
+        {
+            "firstName":"Lucas", 
+            "lastName":"Lopez", 
+            "username":"lmlopez", 
+            "pin":"Welcome1"
+        },
+        {
+            "firstName":"Matthew", 
+            "lastName":"Lopez", 
+            "username":"dmlopez", 
+            "pin":"Welcome1"
+        }
+    ]
+}  

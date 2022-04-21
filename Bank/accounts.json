@@ -1,0 +1,22 @@
+{
+    "accounts":[
+        {
+            "isActive":"true", 
+            "belongsTo":0, 
+            "type":"Checking",
+            "balance":1000
+        },
+        {
+            "isActive":"true", 
+            "belongsTo":1, 
+            "type":"Savings",
+            "balance":2300
+        },
+        {
+            "isActive":"true", 
+            "belongsTo":2, 
+            "type":"Loan",
+            "balance":300
+        }
+    ]
+} 
