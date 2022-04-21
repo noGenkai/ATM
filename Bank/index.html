@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopez Banking</title>
+
+    <!-- This link is dedicated to connecting the index.css file to this html file. -->
+    <link rel="stylesheet" href="./index.css">
+    <!-- This script is dedicated to connecting the index.js file to this html file. -->
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to Lopez Bank</h1>
+
+    <!-- Login and Register account div -->
+    <div>
+        <!-- A log in Button for users that already have a Login. -->
+        <button id="login" onclick="login()">Login</button>
+
+        <!-- A register button for users that do not have a  -->
+        <button id="register" onclick="register()">Register</button>
+
+    </div>
+
+    <br>
+
+    <!-- Dynamic Message -->
+    <div id="dynamicMessage"></div>
+
+    <br>
+
+    <!-- Register Form -->
+    <div id="registerForm">
+        <form action="">
+
+            <!-- First Name -->
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName">
+
+            <!-- Last Name -->
+            <label for="lastName" >Last Name: </label>
+            <input type="text" id="username">
+
+            <!-- Username Field -->
+            <label for="username" class="registerInput loginInput">Username</label>
+            <input type="text" id="username" >
+
+            <!-- Password Field -->
+            <label for="password" class="registerInput loginInput">Password</label>
+            <input type="password" id="password">
+
+            <button onclick="getUserCredentials();" type="button" class="registerInput loginInput">Submit</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <form action="">
+
+            <!-- Username Field -->
+            <label for="username" class="registerInput loginInput">Username</label>
+            <input type="text" id="username" >
+
+            <!-- Password Field -->
+            <label for="password" class="registerInput loginInput">Password</label>
+            <input type="password" id="password">
+
+            <button onclick="getUserCredentials();" type="button" class="registerInput loginInput">Submit</button>
+        </form>
+    </div>
+
+    <div id="users"></div>
+    
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+#registerForm,
+#loginForm {
+  display: none;
+}
+
+input {
+  display: block;
+  padding: 2px;
+}
